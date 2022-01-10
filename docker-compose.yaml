@@ -1,0 +1,9 @@
+version: "3.3"
+services:
+  xymon:
+    build: .
+    image: xymon
+    container_name: xymon
+    hostname: xymon
+
+# vim:set ts=2 sw=2 et
