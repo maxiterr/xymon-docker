@@ -21,7 +21,7 @@ FPING = /usr/bin/fping
 # Username running Xymon
 XYMONUSER = xymon
 # Xymon server hostname
-XYMONHOSTNAME = 9933be8bfbe2
+XYMONHOSTNAME = xymon
 # Xymon server IP-address
 XYMONHOSTIP = 127.0.0.1
 # Xymon server OS

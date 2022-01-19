@@ -5,5 +5,23 @@ services:
     image: xymon
     container_name: xymon
     hostname: xymon
+    ports:
+      - 80:80
+    volumes:
+      - www:/opt/xymon/server/www
+      - data:/opt/xymon/data
+      - ~/xymon-backup/:/opt/xymon-backup/
+
+volumes:
+  www:
+    driver_opts:
+      type: "tmpfs"
+      o: "size=50m"
+      device: "tmpfs"
+  data:
+    driver_opts:
+      type: "tmpfs"
+      o: "size=50m"
+      device: "tmpfs"
 
 # vim:set ts=2 sw=2 et

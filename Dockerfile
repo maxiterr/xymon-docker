@@ -16,6 +16,10 @@ RUN a2enmod rewrite authz_groupfile cgid
 RUN a2ensite xymon.conf
 EXPOSE 80
 
+RUN mv /opt/xymon/ /opt/xymon_init/
+
+RUN apt update && apt install -y vim curl jq && apt clean
+
 WORKDIR /root
 COPY wrapper.sh /root/
 CMD /root/wrapper.sh
